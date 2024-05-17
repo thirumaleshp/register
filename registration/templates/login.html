@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		body {
+			font-family: sans-serif;
+			background-color: rgb(120, 120, 120);
+		  }
+		  
+		  
+		  input {
+			width: 100%;
+			padding: 10px;
+			border: 5px solid black;
+			margin-bottom: 10px;
+			border-radius: 8px;
+			background-image: ;
+		  }
+		  
+		  
+		  
+		  button {
+			background-color: black;
+			color: white;
+			padding: 10px;
+			border: none;
+			font-size: 15px;
+			border-radius: 8px;
+			cursor: pointer;
+		  }
+		  
+		  .container{
+			border-radius: 10px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: rgb(210, 210, 210);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			}
+		  
+		  
+		  .otp{
+			width: 50%;
+		  }
+		  
+		  
+		  /*for from in registration form*/
+		  .form{
+			width: 60%;
+		  }
+		  
+		  
+		  /*for button in registration form*/
+		  .register {
+			text-align: center;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+		  }
+		  
+		  
+		  
+		  .box{
+			width: 20%;
+			background-color: white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 10px;
+			padding: 20px;
+			margin: 0 auto;
+		  }
+		  
+		  
+		  
+		  
+		  
+		  @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap');
+		  
+		  * {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'roboot', sans-serif;
+			text-decoration: none;
+		  }
+		  nav {
+			width: 100%;
+			height: 48px;
+			background: #000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		  }
+		  nav ul {
+			list-style: none;
+			display: flex;
+		  }
+		  nav ul li {
+			margin: 0 40px;
+		  }
+		  nav ul li a {
+			font-weight: 300;
+			color: #adadad;
+			transition: 600ms;
+		  }
+		  nav ul li a:hover {
+			color: #f5f5f7;
+		  }
+		  
+		  
+		  
+		  
+		  
+		  /*--- section welcome ---*/
+		  .welcome {
+			width: 100%;
+			height: 500px;
+			background-image: url("https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/thai-aos-en-banner-hero-20160202?wid=1440&hei=689&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=0");
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		  }
+		  .welcome h1 {
+			color: #fff;
+			font-weight: 300;
+			font-size: 2rem;
+		  }
+		  
+		  /*--- section product ---*/
+		  .product-mac,
+		  .product-iphone,
+		  .product-watch,
+		  .product-ipad {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 50px 0;
+			cursor: pointer;
+		  }
+		  .product-mac h2,
+		  .product-iphone h2,
+		  .product-watch h2,
+		  .product-ipad h2 {
+			font-size: 2rem;
+			font-weight: 300;
+			margin-bottom: 20px;
+		  }
+		  .container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		  }
+		  .grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 15px;
+		  }
+		  .grid-product {
+			background: #f1f1f1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: .5s;
+		  }
+		  .grid-product:hover {
+			background: #e1e1e1;
+		  }
+		  .grid-product img {
+			width: 300px;
+		  }
+		  .grid-detail {
+			margin: 20px 0;
+			text-align: center;
+		  }
+		  .grid-detail p:last-child {
+			transition: .5s;
+			margin-top: 10px;
+		  }
+		  .grid-product:hover > .grid-detail p:last-child {
+			color: #3498db;
+		  }
+	</style>
+</head>
+<body>
+	<div class="container" id="login">
+    <form method="post">
+        <h1 align='center'> Login</h1><br>
+        {% csrf_token %} 
+        <label for="username"><h4>Username:</h4></label>
+        <input type="text" placeholder="Enter Username" id="username" name="username">
+
+        <label for="password"><h4>Password:</h4></label>
+        <input type="password" placeholder="Password" id="password" name="pass">
+
+        <button type="submit" align=center>Login</button>
+    </form>
+	<form action="signup.html" align=left>
+		<button>Signup</button>
+	</form>
+</div>
+</body>
+</html>  
+  
+
+
