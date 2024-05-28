@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-7">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<style>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Signup Page</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style>
 		body {
 			font-family: sans-serif;
 			background-color: rgb(120, 120, 120);
@@ -16,9 +19,9 @@
 		  input {
 			width: 100%;
 			padding: 10px;
-			border: 5px solid black;
+			border: 4px solid black;
 			margin-bottom: 10px;
-			border-radius: 8px;
+			border-radius: 10px;
 			background-image: ;
 		  }
 		  
@@ -45,12 +48,6 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			}
-		  
-		  
-		  .otp{
-			width: 50%;
-		  }
-		  
 		  
 		  /*for from in registration form*/
 		  .form{
@@ -160,7 +157,7 @@
 			margin-bottom: 20px;
 		  }
 		  .container {
-			width: 1070px;
+			width: 800px;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
@@ -231,27 +228,26 @@
 </head>
 <body>
 	<div class="container">
-		<form action="login.html" class="form" method="post">
-			{% csrf_token %}
-			<h1>Signup Here</h1>
-        	<label for="username">Username</label>
-    	    <input type="text" placeholder="Username" name="username" id="username">
-
-        	<label for="email">Email</label>
-        	<input type="email" placeholder="Email or Phone" name="email" id="email">
-
-        	<label for="password1">Password</label>
-        	<input type="password" placeholder="Password" id="password1" name="password1">
-
-	        <label for="password2">Confrom Password</label>
-    	    <input type="password" placeholder="Confrom Password" id="password2" name="password2">
-	        <button type="submit">Signup</button>
-    	    <form action="login.html">
-				<button>Login</button>
-			</form>
-    	</form>
+		<form method="post">
+            {% csrf_token %} 
+            <h2 align=center>Signup Here</h2>
+    
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" name="username" id="username">
+    
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email or Phone" name="email" id="email">
+    
+            <label for="password1">Password</label>
+            <input type="password" placeholder="Password" id="password1" name="password1">
+    
+    
+            <label for="password2">Confrom Password</label>
+            <input type="password" placeholder="Confrom Password" id="password2" name="password2">
+            <button type="submit">Signup</button>
+            
+            <a href="{% url 'login' %}" >i have already account</a>
+        </form>
 	</div>
 </body></form>
-</body>
 </html>
-
