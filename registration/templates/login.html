@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login Page</title>
-	<link rel="stylesheet" href="css/styles.css">
-	<style>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Login Page</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style>
 		body {
 			font-family: sans-serif;
 			background-color: rgb(120, 120, 120);
@@ -198,24 +200,19 @@
 	</style>
 </head>
 <body>
-	<div class="container" id="login">
-    <form method="post">
-        <h1 align='center'> Login</h1><br>
-        {% csrf_token %} 
-        <label for="username"><h4>Username:</h4></label>
-        <input type="text" placeholder="Enter Username" id="username" name="username">
-
-        <label for="password"><h4>Password:</h4></label>
-        <input type="password" placeholder="Password" id="password" name="pass">
-
-        <button type="submit" align=center>Login</button>
-    </form>
-	<form action="signup.html" align=left>
-		<button>Signup</button>
-	</form>
-</div>
+    <div class="container" id="login">
+        <form method="post">
+            <h2 align=center>Login Here</h2>
+            {% csrf_token %} 
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" id="username" name="username">
+    
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" name="pass">
+    
+            <button type="submit">Log In</button>
+            <a href="{% url 'signup' %}" >Create a account</a>
+        </form>
+    </div>
 </body>
-</html>  
-  
-
-
+</html>
